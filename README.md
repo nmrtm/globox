@@ -1,7 +1,7 @@
 # GloBox A/B Test Analysis
 
 ## 🧪 The Project  
-Analyze the results of an A/B test for a website banner for GloBox, a fictional company, and provide a data-backed recommendation to stakeholders about whether to launch the new banner experience.
+Analyze the results of an A/B test for a website banner for GloBox, a fictional company, and provide a data-backed recommendation to stakeholders on whether to launch the new banner experience.
 
 ---
 
@@ -22,49 +22,59 @@ GloBox is primarily known for boutique fashion items and high-end decor. However
 
 ---
 
-## 🧠 Process  
+## 🧠 Process Overview  
 1. **Data cleaning, transformation, and exploratory analysis** were conducted in **Beekeeper Studio** using PostgreSQL.
 2. Cleaned datasets were **exported to Tableau Desktop** for visual exploration.
-3. The same data was also analyzed in **Google Sheets** for:
+3. The same dataset was also analyzed in **Google Sheets** for:
    - Hypothesis testing  
-   - Confidence interval estimation  
+   - Confidence intervals  
    - Power analysis
-4. A second dataset was exported for **novelty effect analysis** in Tableau.
-5. Final results and visual insights were compiled in the **attached slide deck and technical report**.
+4. A separate export was created to analyze **novelty effects**.
+5. Final recommendations and visual insights were compiled in the attached **slide deck**.
 
 ---
 
 ## 🔍 Key Insights  
-- 📈 The **treatment group** showed a **significant lift in conversion rate** but no notable increase in revenue.
+- 📈 The **treatment group** showed a **significant increase in conversion rate**, but no meaningful change in revenue.
 - 🌍 Highest conversion rates were seen among:
   - Users from **Mexico**
   - **Male** users
-  - Users on **Android** devices
+  - **Android** users
 - 🕒 **No novelty effects** were observed over time.
 
 ---
 
 ## ✅ Recommendation  
-Since only one of the two business objectives was achieved, I recommended **re-running the test** with modifications, outlined in detail in the slide deck and technical report.
+Since only one of the two business goals was met, I recommended **re-running the test** with adjusted targeting and design, as detailed in the slide deck and technical report.
 
 ---
 
 ## 🗂 Files Included
 
-- `init_schema.sql` – Contains all queries used for:
-  - Exploratory analysis
-  - Conversion rate calculations
-  - Group comparisons
-  - Tableau/Sheets-ready extracts
-- `README.md` – You’re reading it!
-- Optional: Slide deck (if added to the repo)
-
-> ⚠️ Note: Due to lack of schema permissions on the Neon-hosted PostgreSQL database, some DDL operations (like `CREATE TABLE`) may not execute if tested directly. All code was written and tested in Beekeeper Studio using existing datasets.
+- `init_schema.sql` – All SQL queries used for:
+  - Exploratory analysis  
+  - Conversion metrics  
+  - Group comparisons  
+  - Tableau/Sheets exports
+- `README.md` – This document
+- **Slide deck** – Final summary presentation (attached separately)
 
 ---
 
-## 🧰 Tools Used
-- PostgreSQL (Neon via Beekeeper Studio)
-- Tableau Desktop
-- Google Sheets
-- GitHub
+## 🛠️ Tools Used
+- **PostgreSQL** (via [Neon](https://neon.tech) using Beekeeper Studio)
+- **Tableau Desktop**
+- **Google Sheets**
+- **GitHub**
+
+---
+
+## 🔐 Database Access & Notes
+
+> ⚠️ Some DDL operations (like `CREATE TABLE`) may fail when run directly due to lack of schema privileges on the hosted Neon DB.  
+> All SQL was written, tested, and exported using Beekeeper Studio.
+
+### 🔗 Connection Info (Read-Only)
+
+'postgres://Test:bQNxVzJL4g6u@ep-noisy-flower-846766-pooler.us-east-2.aws.neon.tech/Globox'
+
