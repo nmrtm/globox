@@ -51,12 +51,12 @@ Since only one of the two business goals was met, I recommended **re-running the
 
 ## 🗂 Files Included
 
+- `README.md` – This document
 - `EDA.sql` – All SQL queries used for:
   - Exploratory analysis  
   - Conversion metrics  
   - Group comparisons  
   - Tableau/Python exports
-- `README.md` – This document
 - `Globox_statistical_analysis.py` – Python script containing:
   - Hypothesis testing on conversion rates and average spend
   - Confidence interval calculations
