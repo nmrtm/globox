@@ -47,7 +47,7 @@ FROM groups g
 LEFT JOIN spent s ON g.uid = s.uid
 GROUP BY g.group;
 
--- 2. Data Extract to Tableau - Exploratory Visualisation & Google Sheets
+-- 2. Data Extract to Tableau - Exploratory Visualisation & Python for Hypothesis Testing
 WITH cte_conversion AS (
     SELECT g.uid,
            SUM(COALESCE(spent, 0)) AS spend,
