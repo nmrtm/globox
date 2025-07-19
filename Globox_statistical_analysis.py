@@ -162,5 +162,6 @@ for i, bar in enumerate(bars):
 
 plt.title("Average Spend per User by Group (95% Confidence Intervals)")
 plt.ylabel("Average Spend")
+plt.ylim(0, 5.5)
 plt.tight_layout()
 plt.show()
