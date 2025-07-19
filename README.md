@@ -25,11 +25,11 @@ GloBox is primarily known for boutique fashion items and high-end decor. However
 ## 🧠 Process Overview  
 1. **Data cleaning, transformation, and exploratory analysis** were conducted in **Beekeeper Studio** using PostgreSQL.
 2. Cleaned datasets were **exported to Tableau Desktop** for visual exploration.
-3. The same dataset was also analyzed in **Google Sheets** for:
-   - Hypothesis testing  
+3. The same dataset was also analysed with **Python** for:
+   - Hypothesis testing
+   - Effect size estimation
    - Confidence intervals  
-   - Power analysis
-4. A separate export was created to analyze **novelty effects**.
+4. A separate export was created to analyse **novelty effects**.
 5. Final recommendations and visual insights were compiled in the attached **slide deck**.
 
 ---
@@ -51,27 +51,32 @@ Since only one of the two business goals was met, I recommended **re-running the
 
 ## 🗂 Files Included
 
-- `init_schema.sql` – All SQL queries used for:
+- `EDA.sql` – All SQL queries used for:
   - Exploratory analysis  
   - Conversion metrics  
   - Group comparisons  
-  - Tableau/Sheets exports
+  - Tableau/Python exports
 - `README.md` – This document
+- `Globox_statistical_analysis.py` – Python script containing:
+  - Hypothesis testing on conversion rates and average spend
+  - Confidence interval calculations
+  - Effect size estimation using Cohen's h and d
+  - Visualisations with error bars
 - **Slide deck** – Final summary presentation (attached separately)
 
 ---
 
 ## 🛠️ Tools Used
-- **PostgreSQL** (via [Neon](https://neon.tech) using Beekeeper Studio)
+- **PostgreSQL** (via Beekeeper Studio)
 - **Tableau Desktop**
-- **Google Sheets**
+- **Python**
 - **GitHub**
 
 ---
 
 ## 🔐 Database Access & Notes
 
-> ⚠️ Some DDL operations (like `CREATE TABLE`) may fail when run directly due to lack of schema privileges on the hosted Neon DB.  
+> ⚠️ Some DDL operations (like `CREATE TABLE`) may fail when run directly due to a lack of schema privileges on the hosted Neon DB.  
 > All SQL was written, tested, and exported using Beekeeper Studio.
 
 ### 🔗 Connection Info (Read-Only)
